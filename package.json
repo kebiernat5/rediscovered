@@ -38,7 +38,6 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.13",
     "morgan": "^1.10.0",
-<<<<<<< HEAD
     "styled-components": "^5.2.3",
     "tailwindcss": "^2.1.2",
     "twin.macro": "^2.4.1"
@@ -55,8 +54,5 @@
         "from": "styled-components"
       }
     }
-=======
-    "react-scripts": "^4.0.3"
->>>>>>> 80f01cf4c9f2fb116cc0f1030c95321d4236be1b
   }
 }
