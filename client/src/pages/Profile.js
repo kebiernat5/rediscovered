@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import API from "./../utils/API";
 import { Link } from "react-router-dom";
 import { useAuth } from "../utils/auth";
+// import Card from "../components/Card"
+
 
 function Profile() {
   const [username, setUsername] = useState("");
@@ -21,6 +23,9 @@ function Profile() {
       <Link to="/practice"><button type="button" className="btn btn-primary">Practice</button></Link> 
       <Link to="/createQuestions"><button type="button" className="btn btn-secondary">Create new Question</button> </Link> 
       <Link to="/">Go home</Link>
+      {/* <>
+      <Card />
+      </> */}
     </div>
   );
 }
