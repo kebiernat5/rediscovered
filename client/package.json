@@ -4,20 +4,20 @@
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "@craco/craco": "^6.1.2",
     "axios": "^0.18.1",
     "jwt-decode": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.0",
-    "react-scripts": "^3.3.0"
+    "react-scripts": "^4.0.3"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "lint": "eslint src",
-    "lint:fix": "eslint --fix src"
+    "build:style": "tailwind build src/styles/index.css -o src/styles/tailwind.css",
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "react-scripts eject"
   },
   "browserslist": {
     "production": [
@@ -30,5 +30,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss7-compat": "^2.1.2",
+    "autoprefixer": "^9.8.6",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.1.2"
   }
 }

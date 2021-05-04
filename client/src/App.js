@@ -13,8 +13,9 @@ import CreateQuestions from "./pages/CreateQuestions";
 import Navbar from "./components/Navbar";
 
 function App() {
-  return (
+  return ( 
     <AuthProvider>
+   
       <Router>
         <div>
           <Navbar />
