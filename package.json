@@ -40,6 +40,21 @@
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.13",
     "morgan": "^1.10.0",
-    "react-scripts": "^4.0.3"
+    "styled-components": "^5.2.3",
+    "tailwindcss": "^2.1.2",
+    "twin.macro": "^2.4.1"
+  },
+  "babelMacros": {
+    "twin": {
+      "preset": "styled-components",
+      "styled": {
+        "import": "default",
+        "from": "styled-components"
+      },
+      "css": {
+        "import": "css",
+        "from": "styled-components"
+      }
+    }
   }
 }
