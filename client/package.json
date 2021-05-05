@@ -6,6 +6,7 @@
   "dependencies": {
     "@craco/craco": "^6.1.2",
     "axios": "^0.18.1",
+    "cloudinary-react": "^1.7.0",
     "jwt-decode": "^2.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",

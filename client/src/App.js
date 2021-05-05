@@ -11,11 +11,11 @@ import Home from "./pages/Home";
 import Practice from "./pages/Practice";
 import CreateQuestions from "./pages/CreateQuestions";
 import Navbar from "./components/Navbar";
+import Upload from "./pages/Upload";
 
 function App() {
-  return ( 
+  return (
     <AuthProvider>
-   
       <Router>
         <div>
           <Navbar />
@@ -28,6 +28,9 @@ function App() {
             </Route>
             <Route exact path="/signup">
               <Signup />
+            </Route>
+            <Route exact path="/upload">
+              <Upload />
             </Route>
             <ProtectedRoute exact path="/profile">
               <Profile />
