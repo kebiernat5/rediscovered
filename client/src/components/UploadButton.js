@@ -1,12 +1,6 @@
 import React, { useState } from "react";
 
-// const cloudinaryConfig = {
-//     CLOUD_NAME:"katebiernat", 
-//     API_KEY:"512424249258488",
-//     API_SECRET:"xkvnb5Mwu9RCHZOrRRwVJGKb660",
-//     BASE_DELIVERY_URL:"http://res.cloudinary.com/katebiernat",
-//     SECURE_DELIVERY_URL:"https://res.cloudinary.com/katebiernat",
-//     API_BASE_URL:"https://api.cloudinary.com/v1_1/katebiernat" }
+
 
 function UploadButton() {
   const [selectedFile, setSelectedFile] = useState();
