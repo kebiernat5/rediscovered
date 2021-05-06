@@ -21,7 +21,7 @@ function InstaProfile() {
     // the state currentLocation with that card's State location value
     
 
-    // Add a put route in to get the image to post on the page from Cloudinary
+    // Add a get route in to get the image to post on the page from Cloudinary
 
     return (
         <div>
