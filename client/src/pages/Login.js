@@ -24,13 +24,18 @@ function Login() {
   };
 
   return (
-    <div className="container">
-      <h1>Login</h1>
-      <form onSubmit={handleFormSubmit}>
+    <div className="h-screen font-sans login bg-cover">
+      <div className="container mx-auto h-full flex flex-1 justify-center items-center">
+        <div className="w-full max-w-lg">
+            <div className="leading-loose">
+              <form className="max-w-sm m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl"
+              onSubmit={handleFormSubmit}>
+                  <p className="text-white font-medium text-center text-lg font-bold">LOGIN</p>
+      {/* <form onSubmit={handleFormSubmit}> */}
         <div className="form-group">
-          <label htmlFor="email">Email address:</label>
+          <label htmlFor="email" className="block text-sm text-white">Email address:</label>
           <input
-            className="form-control"
+            className="form-control w-full px-5 py-1 text-gray-700 bg-gray-300 rounded focus:outline-none focus:bg-white"
             placeholder="Email goes here..."
             name="email"
             type="email"
@@ -39,8 +44,8 @@ function Login() {
             onChange={({ target }) => setEmail(target.value)}
           />
         </div>
-        <div className="form-group">
-          <label htmlFor="pwd">Password:</label>
+        <div className="form-group mt-2">
+          <label htmlFor="pwd" className="block  text-sm text-white">Password:</label>
           <input
             className="form-control"
             placeholder="Password goes here..."
@@ -51,17 +56,26 @@ function Login() {
             onChange={({ target }) => setPassword(target.value)}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <div className="mt-4 items-center flex justify-between">
+        <button type="submit" className="px-4 py-1 text-white font-light tracking-wider bg-gray-900 hover:bg-gray-800 rounded">
           Submit
         </button>
-      </form>
-      <p>
+        <a className="inline-block right-0 align-baseline font-bold text-sm text-500 text-white hover:text-red-400"
+                                    href="#">create an account</a>
+      <p className="inline-block right-0 align-baseline font-bold text-sm text-500 text-white hover:text-red-400">
         <Link to="/signup">Go to Signup</Link>
       </p>
-    </div>
+      </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    
   );
 }
 
 export default Login;
+
+
+  
