@@ -1,6 +1,26 @@
 import React from 'react'
 
 function InstaProfile() {
+    // all your images+locations will be stored in an array in state : data
+    
+    //an array of objects, {img:..., location:CA} 
+        
+    // plus you should have a currentLocationClicked state : currentLocation
+    // add another state called filteredData
+
+    // create a filter function, that filters the data depeneding of what State you clicked
+        // array.filter(if whatever is in here )
+
+    // use a UseEffect
+        // updating the state location
+        // updated the filtered list
+
+    ///// /inside the return
+    // map over the filtereData to dynamically render all of the cards
+    // inside of each card, there should be an onclick function to update 
+    // the state currentLocation with that card's State location value
+    
+
     return (
         <div>
             <div className="w-11/12">
@@ -49,6 +69,7 @@ function InstaProfile() {
     </div>
     <div className="border-b border-gray-300"></div>
     <article className="mt-5 grid grid-cols-3 gap-10">
+        {/* using a map to dynamically render all of the images */}
         <div className="cursor-pointer relative width:300px; height:300px">
             <img src="https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
                 className="foto w-full h-full object-cover"
