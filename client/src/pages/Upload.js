@@ -7,6 +7,7 @@ function Upload() {
     },
     (error, result) => {
       if (!error && result && result.event === "success") {
+        // PUT route for images to be sent to our server.
         console.log("Done! Here is the image info: ", result.info);
       }
     }
