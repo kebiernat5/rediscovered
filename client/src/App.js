@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 
 // Our Components
@@ -12,6 +12,8 @@ import Practice from "./pages/Practice";
 import CreateQuestions from "./pages/CreateQuestions";
 import Navbar from "./components/Navbar";
 import Upload from "./pages/Upload";
+import GetOnlinePost from "./components/OnlinePost/GetOnlinePost" 
+
 
 function App() {
   return (
@@ -23,6 +25,9 @@ function App() {
             <ProtectedRoute exact path="/">
               <Home />
             </ProtectedRoute>
+            <Route path="/api-test">
+              <GetOnlinePost/>
+            </Route>
             <Route exact path="/login">
               <Login />
             </Route>
