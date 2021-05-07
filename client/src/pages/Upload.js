@@ -23,7 +23,8 @@ function Upload() {
         marginTop: "100px",
       }}
     >
-      <button onClick={open}>Open</button>
+    
+      <button  className="btn btn-primary px-4 py-1 text-white font-light tracking-wider bg-gray-900 hover:bg-gray-800 rounded" onClick={open}>Pick a Photo</button>
     </div>
   );
 }

@@ -2,7 +2,8 @@ import React from "react";
 // import API from "./../utils/API";
 // import { Link } from "react-router-dom";
 // import { useAuth } from "../utils/auth";
-import UploadButton from "../components/UploadButton";
+// import UploadButton from "../components/UploadButton";
+import Upload from "../pages/Upload"
 
 function CreateQuestions() {
 //   const [username, setUsername] = useState("");
@@ -18,7 +19,7 @@ function CreateQuestions() {
 
   return (
     <div>
-      <UploadButton />
+      <Upload />
     </div>
     // <div className="container Profile">
     //   <h1>On the CreateQuestions page!</h1>
