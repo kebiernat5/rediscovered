@@ -5,7 +5,6 @@ const db = require("../models");
 const router = express.Router();
 
 router.post("/api/login", (req, res) => {
-  console.log("hello")
   auth
     .logUserIn(req.body.email, req.body.password)
     .then((dbUser) => res.json(dbUser))

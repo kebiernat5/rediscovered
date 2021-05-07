@@ -48,7 +48,7 @@ function NavLinks() {
 
 function Navbar() {
   return (
-    <div className="flex min-h-screen">
+    <div className="flex">
       <nav className="navbar navbar-expand navbar-dark bg-primary flex flex-wrap justify-between w-screen h-20 text-white bg-black md:flex-nowrap">
         <p class="text-2xl text-">Rediscovered</p>
         <div className="container">

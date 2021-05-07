@@ -26,7 +26,7 @@ export const AuthProvider = ({ value, ...rest }) => {
         user,
         isLoggedIn,
         login,
-        logout
+        logout,
       }}
       {...rest}
     />
