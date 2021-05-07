@@ -1,26 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
 
 function InstaProfile() {
-  // all your images+locations will be stored in an array in state : data
-
-  //an array of objects, {img:..., location:CA}
-
-  // plus you should have a currentLocationClicked state : currentLocation
-  // add another state called filteredData
-
-  // create a filter function, that filters the data depeneding of what State you clicked
-  // array.filter(if whatever is in here )
-
-  // use a UseEffect
-  // updating the state location
-  // updated the filtered list
-
-  ///// /inside the return
-  // map over the filtereData to dynamically render all of the cards
-  // inside of each card, there should be an onclick function to update
-  // the state currentLocation with that card's State location value
-
-  // Add a get route in to get the image to post on the page from Cloudinary
+  const [posts, setPosts] = useState([
+    {
+      src:
+        "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    },
+    {
+      src:
+        "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    },
+    {
+      src:
+        "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    },
+    {
+      src:
+        "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    },
+    {
+      src:
+        "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    },
+    {
+      src:
+        "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    },
+    {
+      src:
+        "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    },
+    {
+      src:
+        "https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+    },
+  ]);
 
   return (
     <div>
@@ -48,7 +62,6 @@ function InstaProfile() {
               >
                 Edit Profile
               </a>
-
               <button className="flex items-center ml-3 border border-blue-600 hover:bg-blue-600 hover:text-white rounded outline-none focus:outline-none bg-transparent text-blue-600 text-sm py-1 px-2">
                 <span className="block">Following</span>
                 <svg
@@ -118,72 +131,70 @@ function InstaProfile() {
             </div>
           </div>
         </div>
+        <div className="justify-items-center">
+          <div className="bg-gray-200 text-sm text-gray-500 leading-none border-2 border-gray-200 rounded-full inline-flex">
+            <button
+              className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-blue-400 focus:text-blue-400 rounded-l-full px-4 py-2 active"
+              id="grid"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="fill-current w-4 h-4 mr-2"
+              >
+                <rect x="3" y="3" width="7" height="7"></rect>
+                <rect x="14" y="3" width="7" height="7"></rect>
+                <rect x="14" y="14" width="7" height="7"></rect>
+                <rect x="3" y="14" width="7" height="7"></rect>
+              </svg>
+              <span>Grid</span>
+            </button>
+            <button
+              className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-blue-400 focus:text-blue-400 rounded-r-full px-4 py-2"
+              id="list"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="fill-current w-4 h-4 mr-2"
+              >
+                <line x1="8" y1="6" x2="21" y2="6"></line>
+                <line x1="8" y1="12" x2="21" y2="12"></line>
+                <line x1="8" y1="18" x2="21" y2="18"></line>
+                <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                <line x1="3" y1="18" x2="3.01" y2="18"></line>
+              </svg>
+              <span>List</span>
+            </button>
+          </div>
+        </div>
         <div className="border-b border-gray-300"></div>
         <article className="mt-5 grid grid-cols-3 gap-10">
           {/* using a map to dynamically render all of the images */}
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
+          {posts.map((post) => (
+            <div className="cursor-pointer relative width:300px; height:300px">
+              <img
+                src={post.src}
+                className="foto w-full h-full object-cover"
+                alt="description"
+              ></img>
+            </div>
+          ))}
         </article>
       </div>
     </div>

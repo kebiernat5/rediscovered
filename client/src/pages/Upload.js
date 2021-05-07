@@ -2,8 +2,8 @@ import React from "react";
 function Upload() {
   const myWidget = window.cloudinary.createUploadWidget(
     {
-      cloudName: "dtrivepv1", // make this your own cloud name
-      uploadPreset: "xzaf3ynx",
+      cloudName: "katebiernat", // make this your own cloud name
+      uploadPreset: "rediscovered-preset",
     },
     (error, result) => {
       if (!error && result && result.event === "success") {
