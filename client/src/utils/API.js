@@ -18,13 +18,16 @@ export default {
       token: localStorage.getItem("id_token"),
     });
   },
-  getImage: () => {
-    return axios.post("/api/cloudinary", {
-      token: localStorage.getItem("id_token"),
-    });
-  },
+  // getImage: () => {
+  //   return axios.post("/api/cloudinary", {
+  //     token: localStorage.getItem("id_token"),
+  //   });
+  // },
   submitDB: function (imageInfo) {
     console.log(imageInfo);
     return axios.post("/api/uploads", imageInfo);
   },
+  getImage: function (){
+    return axios.get("/api/images");
+  }
 };

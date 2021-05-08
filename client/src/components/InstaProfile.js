@@ -61,9 +61,9 @@ function InstaProfile() {
                   stroke="currentColor"
                 >
                   <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
                     d="M5 13l4 4L19 7"
                   ></path>
                 </svg>
@@ -76,9 +76,9 @@ function InstaProfile() {
                 <svg
                   className="h-8 w-8"
                   fill="none"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="1.5"
                   stroke="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -182,62 +182,7 @@ function InstaProfile() {
               alt="description"
             ></img>
           </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/258109/pexels-photo-258109.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
+          
         </article>
       </div>
     </div>

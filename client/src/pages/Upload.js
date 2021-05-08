@@ -15,9 +15,10 @@ function Upload() {
       if (!error && result && result.event === "success") {
         // PUT route for images to be sent to our server.
         console.log("Done! Here is the image info: ", result.info);
-        API.sendImage(result.info.url)
-          .then((data) => setPhotoState(data.url))
-          .catch((err) => console.log(err));
+        // API.sendImage(result.info.url)
+        //   .then((data) => setPhotoState(data.url))
+        //   .catch((err) => console.log(err));
+        setPhotoState(result.info.url)
       }
     }
   );
@@ -32,6 +33,8 @@ function Upload() {
 
   function handleSubmit (e) {
     e.preventDefault()
+    console.log("Captions State", captionState)
+    console.log("Photo State", photoState)
    API.submitDB({
      caption: captionState,
      imageUrl: photoState
