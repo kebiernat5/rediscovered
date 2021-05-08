@@ -24,7 +24,7 @@ function InstaProfile() {
 
   return (
     <div>
-      <div className="w-11/12">
+      <div className="w-11/12 pt-6">
         <div className="flex justify-center pb-10">
           <img
             src="https://images.pexels.com/photos/3278968/pexels-photo-3278968.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
@@ -87,24 +87,24 @@ function InstaProfile() {
             </div>
             <ul className="flex justify-content-around items-center">
               <li>
-                <span className="block text-base flex">
+                <span className="text-base flex">
                   <span className="font-bold mr-2">23 </span> Posts
                 </span>
               </li>
               <li>
-                <span className="cursor-pointer block text-base flex ml-5">
+                <span className="cursor-pointer text-base flex ml-5">
                   <span className="font-bold mr-2">102k </span> Followers
                 </span>
               </li>
               <li>
-                <span className="cursor-pointer block text-base flex ml-5">
+                <span className="cursor-pointer text-base flex ml-5">
                   <span className="font-bold mr-2">654 </span> followed
                 </span>
               </li>
             </ul>
             <br></br>
             <div className="">
-              <h1 className="text-base font-bold font-light">Darcy</h1>
+              <h1 className="text-base font-light">Darcy</h1>
               <span className="text-base">
                 I am Darcy, I like music, and record videos
               </span>

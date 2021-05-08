@@ -32,7 +32,7 @@ function Login() {
               className="max-w-sm m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl"
               onSubmit={handleFormSubmit}
             >
-              <p className="text-white font-medium text-center text-lg font-bold">
+              <p className="text-white text-center text-lg font-bold">
                 LOGIN
               </p>
               {/* <form onSubmit={handleFormSubmit}> */}
