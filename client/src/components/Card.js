@@ -1,8 +1,8 @@
 import React from "react";
 
-function Card() {
+function Card(props) {
     
-    
+  console.log("Props", props)
   return (
       <>
     <div>
