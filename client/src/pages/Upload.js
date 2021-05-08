@@ -32,9 +32,10 @@ function Upload() {
 
   function handleSubmit (e) {
     e.preventDefault()
-    // take photoState
-    // take captionState
-    // save to GlobalState
+   API.submitDB({
+     caption: captionState,
+     imageUrl: photoState
+  })
   }
 
 
@@ -134,7 +135,7 @@ function Upload() {
           <div className="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer text-gray-500 ml-auto">
             Cancel
           </div>
-          <div className="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500">
+          <div className="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500" onClick={(e) => handleSubmit(e)} >
             Post
           </div>
         </div>
