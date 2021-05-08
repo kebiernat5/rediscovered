@@ -1,6 +1,8 @@
 import React from "react";
 
 function InstaProfile() {
+   
+
   // all your images+locations will be stored in an array in state : data
 
   //an array of objects, {img:..., location:CA}
