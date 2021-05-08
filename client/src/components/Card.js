@@ -3,7 +3,6 @@ import React from "react";
 function Card(props) {
     
   console.log("Props", props)
-    
   return (
       <>
     <div>
