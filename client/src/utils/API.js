@@ -24,6 +24,7 @@ export default {
     });
   },
   submitDB: function (imageInfo) {
-    return Axios.post("/api/uploads", imageInfo);
+    console.log(imageInfo);
+    return axios.post("/api/uploads", imageInfo);
   },
 };
