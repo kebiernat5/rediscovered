@@ -6,6 +6,22 @@ import Card from "../components/Card";
 import { useStoreContext } from "../utils/GlobalState";
 
 function Practice() {
+
+// {props.employees.map(({ picture, name, phone, email, dob, id }) => {
+//   return (
+//     <Card
+//       key={id.value}
+//       image={picture.thumbnail}
+//       firstName={name.first}
+//       lastName={name.last}
+//       phone={phone}
+//       email={email}
+//       date={dob.date.slice(0, -14)}
+//     />
+//   );
+// })}
+
+
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const { user } = useAuth();
@@ -17,6 +33,7 @@ function Practice() {
       setUsername(res.data.username);
       setEmail(res.data.email);
     });
+<<<<<<< HEAD
     API.getImage().then(
       (res) => 
       dispatch({
@@ -27,6 +44,23 @@ function Practice() {
   }, [user]);
 
   return <Card props={state}/>;
+=======
+
+    //API call to find all of our photos, saves the response to global state
+    API.getImage().then(
+      (res) => 
+      {
+        dispatch({
+          type: "SetImages",
+          payload: res.data,
+        })
+      }
+    );
+  }, [user]);
+
+  // Passed in global state as a prop.
+  return <Card props={state} />;
+>>>>>>> c2097ddd42dd870b2de88e46468d0af43b70ed00
 }
 
 export default Practice;

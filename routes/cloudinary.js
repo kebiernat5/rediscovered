@@ -22,16 +22,16 @@ router.put("/api/cloudinary", isAuthenticated, (req, res) => {
     });
 });
 router.post("/api/cloudinary", isAuthenticated, (req, res) => {
-    console.log(req.body);
-    const { id } = jwt.verify(req.body.token, process.env.SERVER_SECRET);
-    db.User.findById({ _id: id })
-      .then((data) => {
-        console.log(data);
-        res.json(data);
-      })
-      .catch((err) => {
-        console.log(err);
-        res.json(err);
-      });
-  });
+  console.log(req.body);
+  const { id } = jwt.verify(req.body.token, process.env.SERVER_SECRET);
+  db.User.findById({ _id: id })
+    .then((data) => {
+      console.log(data);
+      res.json(data);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.json(err);
+    });
+});
 module.exports = router;

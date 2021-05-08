@@ -1,11 +1,15 @@
 import React from "react";
 
 function Card(props) {
+<<<<<<< HEAD
   console.log("Props", props)
   let image = props.imageUrl
   let caption = props.caption
     
+=======
+>>>>>>> c2097ddd42dd870b2de88e46468d0af43b70ed00
     
+  console.log("Props", props)
   return (
       <>
     <div>
