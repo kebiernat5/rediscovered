@@ -23,4 +23,7 @@ export default {
       token: localStorage.getItem("id_token"),
     });
   },
+  submitDB: function (imageInfo) {
+    return Axios.post("/api/uploads", imageInfo);
+  },
 };

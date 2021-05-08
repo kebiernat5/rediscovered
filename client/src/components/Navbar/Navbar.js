@@ -50,25 +50,25 @@ function Navbar() {
   return (
     <div className="flex min-h-3/4">
       <nav className="navbar navbar-expand navbar-dark bg-primary flex flex-wrap justify-between w-screen h-20 text-white bg-black md:flex-nowrap">
-        <p class="text-2xl text-">Rediscovered</p>
+        <p className="text-2xl text-">Rediscovered</p>
         <div className="container">
-          <button class="z-30 flex items-center justify-end flex-grow pr-3 bg-black focus:outline-none md:hidden">
+          <button className="z-30 flex items-center justify-end flex-grow pr-3 bg-black focus:outline-none md:hidden">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="w-8 h-8"
+              className="w-8 h-8"
               fill="none"
               viewBox="0 0 24 24"
               stroke="currentColor"
             >
               <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
                 d="M4 6h16M4 12h16M4 18h16"
               />
             </svg>
           </button>
-          <div class="flex flex-col items-stretch w-screen text-xl text-center transform bg-black md:flex-row md:translate-y-0 md:space-x-5 md:items-center md:justify-end md:pr-3">
+          <div className="flex flex-col items-stretch w-screen text-xl text-center transform bg-black md:flex-row md:translate-y-0 md:space-x-5 md:items-center md:justify-end md:pr-3">
             {/* <a
               href="#"
               class="h-10 leading-10 border-b-2 border-dotted md:border-none"

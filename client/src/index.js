@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import axios from "axios";
-
+import { StoreProvider } from "../src/utils/GlobalState";
 import "./styles/tailwind.css";
 import App from "./App";
 
@@ -16,7 +16,9 @@ if (localStorage.getItem("id_token")) {
 
 ReactDOM.render(
   <React.StrictMode>
+  <StoreProvider>
     <App />
+    </StoreProvider>
   </React.StrictMode>,
   document.getElementById("root")
 );
