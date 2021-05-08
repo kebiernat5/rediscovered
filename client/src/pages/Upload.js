@@ -1,4 +1,3 @@
-import Axios from "axios";
 import React, { useState } from "react";
 import API from "../utils/API";
 import { useStoreContext } from "../utils/GlobalState";
@@ -6,6 +5,7 @@ import { useStoreContext } from "../utils/GlobalState";
 function Upload() {
   const [state, dispatch] = useStoreContext();
   const [photoState, setPhotoState] = useState();
+  const [captionState, setCaptionState] = useState();
   const myWidget = window.cloudinary.createUploadWidget(
     {
       cloudName: "katebiernat", // make this your own cloud name
@@ -13,31 +13,30 @@ function Upload() {
     },
     (error, result) => {
       if (!error && result && result.event === "success") {
+        // Saves the response of our upload to state.
+        console.log("Done! Here is the image info: ", result);
         // PUT route for images to be sent to our server.
-        console.log("Done! Here is the image info: ", result.info);
-        API.sendImage(result.info.url)
-          .then((data) => setPhotoState(data.url))
-          .catch((err) => console.log(err));
+        setPhotoState(result.info.url)
       }
     }
   );
 
-  const [captionState, setCaptionState] = useState();
-
   const handleCaption = (e) => {
     const caption = e.target.value;
-    setCaptionState(caption)
-    console.log(caption);
+    // Saves our caption text fields value to state.
+    setCaptionState(caption);
   };
 
-  function handleSubmit (e) {
-    e.preventDefault()
-   API.submitDB({
-     caption: captionState,
-     imageUrl: photoState
-  })
+  // When we submit, upload the current caption + photo to our DB
+  function handleSubmit(e) {
+    e.preventDefault();   
+    console.log("Caption State", captionState);
+    console.log("Photo State", photoState);
+     API.submitDB({
+       caption: captionState,
+       imageUrl: photoState
+    })
   }
-
 
   function open() {
     myWidget.open();
@@ -135,7 +134,10 @@ function Upload() {
           <div className="btn border border-gray-300 p-1 px-4 font-semibold cursor-pointer text-gray-500 ml-auto">
             Cancel
           </div>
-          <div className="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500" onClick={(e) => handleSubmit(e)} >
+          <div
+            className="btn border border-indigo-500 p-1 px-4 font-semibold cursor-pointer text-gray-200 ml-2 bg-indigo-500"
+            onClick={(e) => handleSubmit(e)}
+          >
             Post
           </div>
         </div>
