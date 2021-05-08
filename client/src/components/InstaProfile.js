@@ -130,10 +130,10 @@ function ListView({ posts }) {
   return (
     <>
       <h1>List View</h1>
-      <article className="mt-5 grid grid-cols-3 gap-10">
+      <article className="mt-5 grid grid-cols-6 gap-10">
         {/* using a map to dynamically render all of the images */}
         {posts.map((post) => (
-          <div className="cursor-pointer relative width:300px; height:300px">
+          <div className="col-start-3 col-span-2 cursor-pointer relative width:300px; height:300px">
             <img
               src={post.src}
               className="foto w-full h-full object-cover"

@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 
 const mongoUri = process.env.MONGODB_URI || "mongodb://localhost:27017/rediscovered";
+// add the enironment variable to heroku
 
 const dbOptions = {
   useNewUrlParser: true,
