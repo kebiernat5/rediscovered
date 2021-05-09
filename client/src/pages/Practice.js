@@ -4,23 +4,23 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../utils/auth";
 import Card from "../components/Card";
 import { useStoreContext } from "../utils/GlobalState";
+import { useParams } from "react-router-dom";
 
 function Practice() {
-
-// {props.employees.map(({ picture, name, phone, email, dob, id }) => {
-//   return (
-//     <Card
-//       key={id.value}
-//       image={picture.thumbnail}
-//       firstName={name.first}
-//       lastName={name.last}
-//       phone={phone}
-//       email={email}
-//       date={dob.date.slice(0, -14)}
-//     />
-//   );
-// })}
-
+  // {props.employees.map(({ picture, name, phone, email, dob, id }) => {
+  //   return (
+  //     <Card
+  //       key={id.value}
+  //       image={picture.thumbnail}
+  //       firstName={name.first}
+  //       lastName={name.last}
+  //       phone={phone}
+  //       email={email}
+  //       date={dob.date.slice(0, -14)}
+  //     />
+  //   );
+  // })}
+  let { id } = useParams();
 
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -35,19 +35,32 @@ function Practice() {
     });
 
     //API call to find all of our photos, saves the response to global state
-    API.getImage().then(
-      (res) => 
-      {
-        dispatch({
-          type: "SetImages",
-          payload: res.data,
-        })
-      }
-    );
+    API.getImage(id).then((res) => {
+      dispatch({
+        type: "SetImages",
+        payload: res.data,
+      });
+    });
   }, [user]);
+  console.log(state);
+
 
   // Passed in global state as a prop.
-  return <Card props={state} />;
-}
+  return (
+    <>
+      {state.imageArray.map(({ photoUrl, username, caption }) => {
+    return (
+      <Card
+      key={id}
+      image={photoUrl}
+      username={username}
+      caption={caption}
+        // date={dob.date.slice(0, -14)}
+      />
+    );
+  })}
+  </>
+  );
+};
 
 export default Practice;

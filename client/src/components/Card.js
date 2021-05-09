@@ -1,7 +1,28 @@
 import React from "react";
+import API from "../utils/API";
 
 function Card(props) {
   console.log("Props", props);
+  // state = {
+  //   username: "",
+  //   image: "",
+  //   caption: ""
+  // };
+
+  // componentDidMount(){
+  //   this.postImage()
+  // }
+
+  // postImage = async () => {
+  //   const { data } = await API.getImage();
+  //   console.log(data)
+  //   const image = data.results.map((item) => ({
+  //     image: item.photoUrl
+  //   }))
+  // }
+
+
+  
   return (
     <>
       <div>
@@ -10,7 +31,7 @@ function Card(props) {
             <div className="col-span-2 w-full">
               <img
                 className="w-full max-w-full min-w-full"
-                src="https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                src={props.image}
                 alt="Description"
               ></img>
             </div>
@@ -25,12 +46,15 @@ function Card(props) {
                     className="h-9 w-9 rounded-full object-cover"
                     alt="user"
                   />
-                  <p className="block ml-2 font-bold">Paul</p>
+                  <p className="block ml-2 font-bold">{props.username} Kate</p>
+                  <span className="text-gray-700 font-medium ml-1">
+                        {props.caption} Caption gots here
+                      </span>
                 </a>
               </header>
 
               <div>
-                <div className="pt-1">
+                {/* <div className="pt-1">
                   <div className="text-sm mb-2 flex flex-start items-center">
                     <div>
                       <a
@@ -51,7 +75,7 @@ function Card(props) {
                       </span>
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <div className="text-sm mb-2 flex flex-start items-center">
                   <div>
                     <a
