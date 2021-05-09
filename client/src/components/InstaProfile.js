@@ -133,9 +133,9 @@ function InstaProfile() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 class="fill-current w-4 h-4 mr-2"
               >
                 <rect x="3" y="3" width="7" height="7"></rect>
@@ -156,9 +156,9 @@ function InstaProfile() {
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
                 class="fill-current w-4 h-4 mr-2"
               >
                 <line x1="8" y1="6" x2="21" y2="6"></line>

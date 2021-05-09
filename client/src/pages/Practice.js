@@ -33,18 +33,6 @@ function Practice() {
       setUsername(res.data.username);
       setEmail(res.data.email);
     });
-<<<<<<< HEAD
-    API.getImage().then(
-      (res) => 
-      dispatch({
-        type: "SetImages",
-        payload: res,
-      })
-    );
-  }, [user]);
-
-  return <Card props={state}/>;
-=======
 
     //API call to find all of our photos, saves the response to global state
     API.getImage().then(
@@ -60,7 +48,6 @@ function Practice() {
 
   // Passed in global state as a prop.
   return <Card props={state} />;
->>>>>>> c2097ddd42dd870b2de88e46468d0af43b70ed00
 }
 
 export default Practice;
