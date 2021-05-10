@@ -1,5 +1,6 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import API from "../utils/API";
+import {useAuth} from "../utils/auth"
 
 function Card(props) {
   console.log("Props", props);
@@ -20,7 +21,13 @@ function Card(props) {
   //     image: item.photoUrl
   //   }))
   // }
-
+  const { user } = useAuth();
+  const [username, setUsername] = useState("");
+  useEffect(() => {
+    API.getUser(user.id).then((res) => {
+      setUsername(res.data.username);
+    });
+  }, [user]);
 
   
   return (
@@ -46,7 +53,7 @@ function Card(props) {
                     className="h-9 w-9 rounded-full object-cover"
                     alt="user"
                   />
-                  <p className="block ml-2 font-bold">{props.username} Kate</p>
+                  <p className="block ml-2 font-bold">{username} </p>
                   <span className="text-gray-700 font-medium ml-1">
                         {props.caption} Caption goes here
                       </span>
