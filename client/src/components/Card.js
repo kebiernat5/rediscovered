@@ -157,13 +157,13 @@ function Card(props) {
                       <textarea
                         className="w-full resize-none outline-none appearance-none"
                         aria-label="Agrega un comentario..."
-                        placeholder="Agrega un comentario..."
+                        placeholder="Write a comment..."
                         autoComplete="off"
                         autoCorrect="off"
                         style={{ height: "36px" }}
                       ></textarea>
                       <button className="mb-2 focus:outline-none border-none bg-transparent text-blue-600">
-                        Publicar
+                        Post
                       </button>
                     </div>
                   </div>
