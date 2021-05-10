@@ -25,14 +25,20 @@ function Practice() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const { user } = useAuth();
-
   const [state, dispatch] = useStoreContext();
 
-  useEffect(() => {
-    API.getUser(user.id).then((res) => {
-      setUsername(res.data.username);
-      setEmail(res.data.email);
-    });
+//   const burrito = {
+//   id: state.imageArray.id,
+//   photoUrl: state.imageArray.photoUrl,
+//   caption: state.imageArray.caption
+// }
+
+
+useEffect(() => {
+  API.getUser(user.id).then((res) => {
+    setUsername(res.data.username);
+    setEmail(res.data.email);
+  });
 
     //API call to find all of our photos, saves the response to global state
     API.getImage(id).then((res) => {
@@ -44,23 +50,21 @@ function Practice() {
   }, [user]);
   console.log(state);
 
-
   // Passed in global state as a prop.
   return (
     <>
-      {state.imageArray.map(({ photoUrl, username, caption }) => {
-    return (
-      <Card
-      key={id}
-      image={photoUrl}
-      username={username}
-      caption={caption}
-        // date={dob.date.slice(0, -14)}
-      />
-    );
-  })}
-  </>
+      {/* {{state.map(({ photoUrl, username, caption }) => { */}
+        {/* return ( */}
+          <Card
+            // key={id}
+            // image={photoUrl}
+            // username={username}
+            // caption={caption}
+          />
+        {/* ); */}
+      {/* })}} */}
+    </>
   );
-};
+}
 
 export default Practice;
