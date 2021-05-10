@@ -36,7 +36,7 @@ function InstaProfile() {
       <div className="w-11/12 pt-6">
         <div className="flex justify-center pb-10">
           <img
-            src="https://images.pexels.com/photos/3278968/pexels-photo-3278968.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+            src="https://64.media.tumblr.com/a89e5ef2d5f01ca1fe158d3de9992269/a52deced0a2f5a1a-46/s540x810/bc9175a34d5bdcbdddf94e7dcfb38f171d099014.jpg"
             className="h-40 w-40 rounded-full object-cover"
             alt="username"
           ></img>
@@ -45,18 +45,18 @@ function InstaProfile() {
               <h2 className="block leading-relaxed font-light text-gray-700 text-3xl">
                 {username}
               </h2>
-              <a
+              {/* <a
                 className="cursor-pointer h-7 px-3 ml-3 outline-none border-transparent text-center rounded border bg-blue-500 hover:bg-blue-600 text-white bg-transparent font-semibold"
                 href="#"
               >
                 Follow
-              </a>
-              <a
+              </a> */}
+              {/* <a
                 className="cursor-pointer h-7 px-3 ml-3 focus:outline-none hover:border-transparent text-center rounded border border-gray-400 hover:bg-blue-500 hover:text-white bg-transparent text-gray-500 font-semibold"
                 href="#"
               >
                 Edit Profile
-              </a>
+              </a> */}
 
               <button className="flex items-center ml-3 border border-blue-600 hover:bg-blue-600 hover:text-white rounded outline-none focus:outline-none bg-transparent text-blue-600 text-sm py-1 px-2">
                 <span className="block">Following</span>
@@ -75,7 +75,7 @@ function InstaProfile() {
                   ></path>
                 </svg>
               </button>
-              <a
+              {/* <a
                 className="cursor-pointer ml-2 p-1 border-transparent text-gray-700 rounded-full hover:text-blue-600 focus:outline-none focus:text-gray-600"
                 href="#"
                 aria-label="Notifications"
@@ -92,14 +92,14 @@ function InstaProfile() {
                   <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
                   <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                 </svg>
-              </a>
+              </a> */}
             </div>
             <ul className="flex justify-content-around items-center">
-              <li>
+              {/* <li>
                 <span className="text-base flex">
                   <span className="font-bold mr-2">23 </span> Posts
                 </span>
-              </li>
+              </li> */}
               <li>
                 <span className="cursor-pointer text-base flex ml-5">
                   <span className="font-bold mr-2">102k </span> Followers
@@ -113,9 +113,9 @@ function InstaProfile() {
             </ul>
             <br></br>
             <div className="">
-              <h1 className="text-base font-light">Darcy</h1>
+              <h1 className="text-base font-light">{username}</h1>
               <span className="text-base">
-                I am Darcy, I like music, and record videos
+                I am {username}! 
               </span>
               <a
                 className="block text-base text-blue-500 mt-2"
