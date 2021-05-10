@@ -1,8 +1,7 @@
-import React from "react";
-
+import React, {useState, useEffect} from "react";
+import API from "../utils/API";
+import {useAuth} from "../utils/auth"
 function InstaProfile() {
-   
-
   // all your images+locations will be stored in an array in state : data
 
   //an array of objects, {img:..., location:CA}
@@ -23,7 +22,13 @@ function InstaProfile() {
   // the state currentLocation with that card's State location value
 
   // Add a get route in to get the image to post on the page from Cloudinary
-
+  const { user } = useAuth();
+  const [username, setUsername] = useState("");
+  useEffect(() => {
+    API.getUser(user.id).then((res) => {
+      setUsername(res.data.username);
+    });
+  }, [user]);
   return (
     <div>
       <div className="w-11/12 pt-6">
@@ -36,8 +41,7 @@ function InstaProfile() {
           <div className="ml-10">
             <div className="flex items-center">
               <h2 className="block leading-relaxed font-light text-gray-700 text-3xl">
-                Darcy
-                {/* this is where the prop should go on line 39 */}
+                {username}
               </h2>
               <a
                 className="cursor-pointer h-7 px-3 ml-3 outline-none border-transparent text-center rounded border bg-blue-500 hover:bg-blue-600 text-white bg-transparent font-semibold"
@@ -115,8 +119,7 @@ function InstaProfile() {
                 className="block text-base text-blue-500 mt-2"
                 href="#"
                 target="_blank"
-              >
-              </a>
+              ></a>
             </div>
           </div>
         </div>
@@ -182,7 +185,6 @@ function InstaProfile() {
               alt="description"
             ></img>
           </div>
-          
         </article>
       </div>
     </div>
