@@ -46,7 +46,7 @@ function Signup() {
               className="max-w-sm m-4 p-10 bg-white bg-opacity-25 rounded shadow-xl"
               onSubmit={handleFormSubmit}
             >
-              <p className="text-white fon-mediumt text-center text-lg font-bold">
+              <p className="text-black fon-mediumt text-center text-lg font-bold">
                 SIGN UP
               </p>
               <div className="form-group mt-2">
