@@ -54,7 +54,7 @@ function Card(props) {
                   />
                   <p className="block ml-2 font-bold">{username} </p>
                   <span className="text-gray-700 font-medium ml-1">
-                    {props.caption} Caption goes here
+                    {props.caption}
                   </span>
                 </a>
               </header>
