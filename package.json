@@ -7,6 +7,8 @@
     "node": "15.11.0"
   },
   "scripts": {
+    "prestart": "npm run seed",
+      "seed": "node seeddb.js",
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",
     "start:prod": "node server.js",
     "start:dev": "concurrently \"nodemon --ignore 'client/*'\" \"npm run client\"",
