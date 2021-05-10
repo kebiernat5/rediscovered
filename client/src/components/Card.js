@@ -48,7 +48,7 @@ function Card(props) {
                   className="cursor-pointer py-4 flex items-center text-sm outline-none focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out"
                 >
                   <img
-                    src="https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+                    src="https://64.media.tumblr.com/a89e5ef2d5f01ca1fe158d3de9992269/a52deced0a2f5a1a-46/s540x810/bc9175a34d5bdcbdddf94e7dcfb38f171d099014.jpg"
                     className="h-9 w-9 rounded-full object-cover"
                     alt="user"
                   />
