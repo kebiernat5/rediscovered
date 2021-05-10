@@ -125,7 +125,7 @@ function InstaProfile() {
             </div>
           </div>
         </div>
-        <div className="justify-items-center">
+        {/* <div className="justify-items-center">
           <div className="bg-gray-200 text-sm text-gray-500 leading-none border-2 border-gray-200 rounded-full inline-flex">
             <button
               className="inline-flex items-center transition-colors duration-300 ease-in focus:outline-none hover:text-blue-400 focus:text-blue-400 rounded-l-full px-4 py-2 active"
@@ -176,7 +176,7 @@ function InstaProfile() {
               <span>List</span>
             </button>
           </div>
-        </div>
+        </div> */}
         <div className="border-b border-gray-300"></div>
         <article className="mt-5 grid grid-cols-3 gap-10">
           {/* using a map to dynamically render all of the images */}
