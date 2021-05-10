@@ -26,7 +26,7 @@ function Profile() {
         <InstaProfile  />
       {state.imageArray.map(({ photoUrl }) => {
         return (
-          <Grid
+          <Grid className="col-span-3 grid-flow-col auto-rows-auto"
           // key={id}
           image={photoUrl}
           />
