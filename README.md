@@ -1,14 +1,14 @@
 # Rediscovered 
 
 ## Preview
-<img src="https://drive.google.com/file/d/1IepHrdHS_TZxe8ZhvdHVOnl58_fY0WRN/view?usp=sharing">
-<img src="https://drive.google.com/file/d/17ESwHd-i0h8cLJv189uLnl49NSbnS-h5/view?usp=sharing">
-<img src="https://drive.google.com/file/d/1w43W9FokGvjhGZi2sgF15nHhrjZlRzUW/view?usp=sharing">
-<img src="https://drive.google.com/file/d/1a4IcW0qW3rgReUcfVOkvQGcUQWmQ5Kft/view?usp=sharing">
-<img src="https://drive.google.com/file/d/128300NqEJBzMUEFdXl38lqF9XJWJco_a/view?usp=sharing">
-<img src="https://drive.google.com/file/d/1PNt5V_KOGWF_-9f_V3_RhPEaFyDKbi2U/view?usp=sharing">
-<img src="https://drive.google.com/file/d/1fcYaWRwK0v9AC5eOrKQqV52WXpC20kNt/view?usp=sharing">
-<img src="https://drive.google.com/file/d/179tgn7pUGLNgEx8bIO1GoyQYYldGSg70/view?usp=sharing">
+<img src="https://i.imgur.com/WmZ9kfy.png">
+<img src="https://i.imgur.com/RHMjrhp.png">
+<img src="https://i.imgur.com/PiCMErU.png">
+<img src="https://i.imgur.com/vib4WLA.png">
+<img src="https://i.imgur.com/895KhN1.png">
+<img src="https://i.imgur.com/2BbznZ8.png">
+<img src="https://i.imgur.com/6lfSYsD.png">
+<img src="https://i.imgur.com/zWfdyKI.png">
 
 ## User Story: 
 ```
