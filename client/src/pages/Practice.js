@@ -39,30 +39,22 @@ useEffect(() => {
     setUsername(res.data.username);
     setEmail(res.data.email);
   });
-
-    //API call to find all of our photos, saves the response to global state
-    API.getImage(id).then((res) => {
-      dispatch({
-        type: "SetImages",
-        payload: res.data,
-      });
-    });
   }, [user]);
-  console.log(state);
+
 
   // Passed in global state as a prop.
   return (
     <>
-      {/* {{state.map(({ photoUrl, username, caption }) => { */}
-        {/* return ( */}
+      {state.imageArray.map(({ photoUrl, username, caption }) => {
+        return (
           <Card
-            // key={id}
-            // image={photoUrl}
-            // username={username}
-            // caption={caption}
+          // key={id}
+          image={photoUrl}
+          username={username}
+          caption={caption}
           />
-        {/* ); */}
-      {/* })}} */}
+        );
+      })}
     </>
   );
 }
