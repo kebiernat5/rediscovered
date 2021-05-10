@@ -1,88 +1,46 @@
-# Create React Express App
-                         Test Kevin
-## About This Boilerplate
+# Rediscovered 
 
-This setup allows for a Node/Express/React/JWT app which can be easily deployed to Heroku.
+## Preview
+<img src="https://drive.google.com/file/d/1IepHrdHS_TZxe8ZhvdHVOnl58_fY0WRN/view?usp=sharing">
+<img src="https://drive.google.com/file/d/17ESwHd-i0h8cLJv189uLnl49NSbnS-h5/view?usp=sharing">
+<img src="https://drive.google.com/file/d/1w43W9FokGvjhGZi2sgF15nHhrjZlRzUW/view?usp=sharing">
+<img src="https://drive.google.com/file/d/1a4IcW0qW3rgReUcfVOkvQGcUQWmQ5Kft/view?usp=sharing">
+<img src="https://drive.google.com/file/d/128300NqEJBzMUEFdXl38lqF9XJWJco_a/view?usp=sharing">
+<img src="https://drive.google.com/file/d/1PNt5V_KOGWF_-9f_V3_RhPEaFyDKbi2U/view?usp=sharing">
+<img src="https://drive.google.com/file/d/1fcYaWRwK0v9AC5eOrKQqV52WXpC20kNt/view?usp=sharing">
+<img src="https://drive.google.com/file/d/179tgn7pUGLNgEx8bIO1GoyQYYldGSg70/view?usp=sharing">
 
-The front-end React app will auto-reload as it's updated via webpack dev server, and the backend Express app will auto-reload independently with nodemon.
-
-An article on how the server is setup with JWT can be found [here](https://hptechblogs.com/using-json-web-token-for-authentication/). This has been modified to use a mongo database instead of hardcoded array of users.
-
-The front end has been setup to use JWT as a way of authenticating users and routes. To understand it's structure better please refer to the following article [here](https://hptechblogs.com/using-json-web-token-react/)
-
-Please feel free to modify this code in anyway you see fit for your project. It is a boilerplate setup that tries to make sure you can get something up and running without having to worry about setting up user authentication from scratch.
-I highly suggest you read the articles before jumping in so you can have an better understanding of how everything works in the code.
-
-Server-side article and using JWT: https://hptechblogs.com/using-json-web-token-for-authentication/
-
-Front End article on using the JWT on a react application: https://hptechblogs.com/using-json-web-token-react/
-
-## Starting the app locally
-
-Add a .env at the top level of this project.
-
-Then inside of the .env add a SERVER_SECRET set to any value you'd like
+## User Story: 
+```
+AS A user,
+I WANT to use an app specifically designed for photos and thoughts of real travel experiences from real other users  
+SO THAT I can always have an unfiltered and real view of the world around me, and possible travel destinations I am interested in.
+```
+## Description: 
 
 ```
-SERVER_SECRET = 123456
+GIVEN an Instagram like app for travel 
+WHEN I open the app
+THEN I am prompted to log in
+WHEN I am logged in
+THEN I can view recently uploaded photos and comments I have created 
+WHEN I click new post I can upload a photo or comment.
 ```
 
-First off make sure you have a local version of MongoDB running on your machine. This project will make a local database for you called `appDB`.
+## Task/Role Breakdown:
 
-```
-mongod
-```
+Kevin: Front End JS/<br>
+Kyle: DB/Routes/Models/API<br>
+Kate: HTML Templates/CSS/Routes/Fetch requests/Tailwind<br>
 
-Start by installing front and backend dependencies. While in the root directory, run the following command:
+## Wireframe/User Interaction:
 
-```
-npm install
-```
+https://www.figma.com/file/79Axjlk7Wlg42C35veN5m2/Untitled?node-id=3%3A8
 
-After all installations complete, run the following command in your terminal:
+## Deployed website
+https://rediscovered.herokuapp.com/
 
-```
-npm start
-```
+## Github Link to repository
+https://github.com/kebiernat5/rediscovered.git
 
-That's it, your app should be running on <http://localhost:3000>. The Express server should intercept any AJAX requests from the client.
 
-## Deployment (Heroku)
-
-### Create a Git Repo
-
-Once you're ready to deploy, start by making sure your project is a git repository. If so, proceed to the next section, otherwise run the following commands in your terminal:
-
-```
-git init
-git add .
-git commit -m "Initial commit"
-```
-
-### Deploying
-
-1. Go onto your heroku account and link your repository through the UI
-2. Go to resources and find mLab as a Add-on
-3. Provision a Mongo Database
-4. Go back and click "Deploy"
-
-## Tests/Linting
-
-Run `npm run lint` from the project root to run eslint checks on the backend
-and front end code. Run `npm run lint` from the `client` directory to lint the
-client only.
-
-The root and client have convenience scripts define to easily apply auto-fixes
-with eslint. Run `npm run lint:fix` from the root and `client` to apply fixes
-for the entire project or client only respectively.
-
-## Travis CI
-
-A basic configuration for Travis CI is included. Configure the GitHub repo to
-run checks before merging to enforce linting checks and tests.
-
-**IMPORTANT!** Add the mongodb service to `.travis.yml` if tests using MongoDB
-are included in the project. Likewise, if another database is used to replace
-MongoDB, then `.travis.yml` will need to be updated accordingly. Please refer
-to the [Travis CI Documentation](https://docs.travis-ci.com/) for more
-information.
