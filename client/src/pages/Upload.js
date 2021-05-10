@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import API from "../utils/API";
 import { useStoreContext } from "../utils/GlobalState";
 
@@ -16,7 +16,7 @@ function Upload() {
         // Saves the response of our upload to state.
         console.log("Done! Here is the image info: ", result);
         // PUT route for images to be sent to our server.
-        setPhotoState(result.info.url)
+        setPhotoState(result.info.url);
       }
     }
   );
@@ -29,14 +29,25 @@ function Upload() {
 
   // When we submit, upload the current caption + photo to our DB
   function handleSubmit(e) {
-    e.preventDefault();   
+    e.preventDefault();
     console.log("Caption State", captionState);
     console.log("Photo State", photoState);
-     API.submitDB({
-       caption: captionState,
-       imageUrl: photoState
-    })
+    API.submitDB({
+      caption: captionState,
+      imageUrl: photoState,
+    });
   }
+
+  useEffect(() => {
+    if (!state.imageArray) {
+      API.getImage().then((res) => {
+        dispatch({
+          type: "SetImages",
+          payload: res.data,
+        });
+      });
+    }
+  }, [state]);
 
   function open() {
     myWidget.open();
