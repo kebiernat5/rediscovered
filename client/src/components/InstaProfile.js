@@ -37,6 +37,7 @@ function InstaProfile() {
             <div className="flex items-center">
               <h2 className="block leading-relaxed font-light text-gray-700 text-3xl">
                 Darcy
+                {/* this is where the prop should go on line 39 */}
               </h2>
               <a
                 className="cursor-pointer h-7 px-3 ml-3 outline-none border-transparent text-center rounded border bg-blue-500 hover:bg-blue-600 text-white bg-transparent font-semibold"
@@ -115,7 +116,6 @@ function InstaProfile() {
                 href="#"
                 target="_blank"
               >
-                https://tailwindcomponents.com/
               </a>
             </div>
           </div>
