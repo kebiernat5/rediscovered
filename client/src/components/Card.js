@@ -38,7 +38,7 @@ function Card(props) {
             <div className="col-span-2 w-full">
               <img
                 className="w-full max-w-full min-w-full"
-                src={"https://images.pexels.com/photos/747964/pexels-photo-747964.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"}
+                src={props.image}
                 alt="Description"
               ></img>
             </div>
