@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from "react";
 import API from "../utils/API";
 import {useAuth} from "../utils/auth"
+import Grid from "./Grid";
+
 function InstaProfile() {
   // all your images+locations will be stored in an array in state : data
 
@@ -178,13 +180,6 @@ function InstaProfile() {
         <div className="border-b border-gray-300"></div>
         <article className="mt-5 grid grid-cols-3 gap-10">
           {/* using a map to dynamically render all of the images */}
-          <div className="cursor-pointer relative width:300px; height:300px">
-            <img
-              src="https://images.pexels.com/photos/247431/pexels-photo-247431.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
-              className="foto w-full h-full object-cover"
-              alt="description"
-            ></img>
-          </div>
         </article>
       </div>
     </div>

@@ -2,13 +2,16 @@ import React, { useState, useEffect } from "react";
 import API from "./../utils/API";
 import { Link } from "react-router-dom";
 import { useAuth } from "../utils/auth";
-import InstaProfile from "../components/InstaProfile"
+import InstaProfile from "../components/InstaProfile";
+import { useStoreContext } from "../utils/GlobalState";
+import Grid from "../components/Grid"
 // import Card from "../components/Card"
 
 
 function Profile() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
+  const [state, dispatch] = useStoreContext();
   const { user } = useAuth();
 
   useEffect(() => {
@@ -20,19 +23,17 @@ function Profile() {
 
   return (
     <>
-    <InstaProfile />
-    {/* <div className="container Profile">
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded ml-4 mt-4">
-  Button
-</button> */}
+        <InstaProfile  />
+      {state.imageArray.map(({ photoUrl }) => {
+        return (
+          <Grid
+          // key={id}
+          image={photoUrl}
+          />
 
-
-      {/* <h1>On the notecards page!</h1>
-      <Link to="/practice"><button type="button" className="btn btn-primary">Practice</button></Link> 
-      <Link to="/createQuestions"><button type="button" className="btn btn-secondary">Create new Question</button> </Link> 
-      <Link to="/">Go home</Link>
-    </div> */}
-      </>
+        );
+      })}
+    </>
   );
 }
 
